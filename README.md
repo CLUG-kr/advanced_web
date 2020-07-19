@@ -3,8 +3,7 @@
 
 ## 7.18
 #### Precondition
-- AWS 가입
-- 결제 수단 등록
+- 강인한 체력과 정신, 공부에 대한 의지, 열정 etc
 #### Contents
 - 다루게 될 테크 스택 & 아키텍처 설명<br>
 ![image](https://user-images.githubusercontent.com/26591788/87870822-89378680-c9e6-11ea-89fa-d27d1360d970.png) 
