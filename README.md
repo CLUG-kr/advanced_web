@@ -6,11 +6,13 @@
 - AWS 가입
 - 결제 수단 등록
 #### Contents
-- 다루게 될 테크 스택 & 아키텍처 설명
+- 다루게 될 테크 스택 & 아키텍처 설명<br>
+![image](https://user-images.githubusercontent.com/26591788/87870822-89378680-c9e6-11ea-89fa-d27d1360d970.png) 
+
 
 ## 7.25
 #### Precondition
-https://goddaehee.tistory.com/175
+https://goddaehee.tistory.com/175  
 위 튜토리얼을 보고 회원가입 결제정보 등록
 (원할한 수업을 위해 2차 비밀번호 설정은 하지 마세요~)
 - AWS 가입
