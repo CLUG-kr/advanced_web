@@ -17,6 +17,7 @@ https://goddaehee.tistory.com/175
 - AWS 가입
 - 결제 수단 등록
 #### Contents
+https://github.com/CLUG-kr/advanced_web/tree/master/2
 - Ec2 발급
 - 리눅스 기본 명령어
 - 리눅스 환경에서 장고 프로젝트 실행
