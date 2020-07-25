@@ -3,6 +3,10 @@
 ```
 $ ssh -i your_key.pem ubuntu@your_ipv4_address
 ```
+## 접속이 되지않는다면 접속 key에 대한 권한을 변경
+```
+$ sudo chmod 400 your_key.pem
+```
 ## Windows 
 ### Putty
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
