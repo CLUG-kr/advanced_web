@@ -153,7 +153,7 @@ $ rm -rf testdir/
 $ ls
 testfile2
 ```
-# 가상환경 생성/실행
+# 장고 가상환경 생성/실행
 
 ```
 $ sudo apt-get update
