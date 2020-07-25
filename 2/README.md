@@ -153,14 +153,18 @@ $ rm -rf testdir/
 $ ls
 testfile2
 ```
-
-# 장고 프로젝트 생성/실행
+# 가상환경 생성/실행
 
 ```
 $ sudo apt-get update
 $ sudo apt-get install virtualenv
 $ virtualenv -p python3 venv
 $ source venv/bin/actiavate
+```
+
+# 장고 프로젝트 생성/실행
+
+```
 $ pip install django==2.2.13
 $ django-admin startproject test_proj
 $ cd test_proj
