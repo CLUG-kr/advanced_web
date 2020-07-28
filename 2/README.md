@@ -180,5 +180,17 @@ $ source venv/bin/actiavate
 $ pip install django==2.2.13
 $ django-admin startproject test_proj
 $ cd test_proj
-$ python manage.py runserver
+$ python manage.py runserver 0.0.0.0:8000  # 0.0.0.0은 어느 소스에서 접속해도 허용한다는 뜻
+```
+
+# AWS console에서 보안그룹 인바운드 규칙 편집
+![image](https://user-images.githubusercontent.com/26591788/88682460-a75f5e00-d12d-11ea-9fb9-236fdc3f35fc.png) 
+위와 같이 8000번 포트를 위치무관에서 접속 가능하도록 열어주세요
+
+## Not Allowed host 에러 발생시
+아래 경로의 settings.py 파일에 ALLOWED_HOSTS 변수에 자신의 서버의 IP 주소를 추가하고 다시 실행후 
+자신의 아이피 주소로 브라우저에서 접속해주세요
+/home/ubuntu/test_proj/test_proj/settings.py
+``` python
+ALLOWED_HOSTS = ['13.125.156.99']
 ```
