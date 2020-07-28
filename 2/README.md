@@ -9,8 +9,16 @@ $ sudo chmod 400 your_key.pem
 ```
 ## Windows 
 ### Putty
+### putty 다운로드
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+### putty EC2 인스턴스 접속 방법
+https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/putty.html
+#### 수업 시간에 발생한 connection refused 해결방법 
+![image](https://user-images.githubusercontent.com/26591788/88681586-b09bfb00-d12c-11ea-8303-5783dc683450.png)    
 
+수업시간에 puttygen으로 ppk 파일을 생성할때 Load 후에 Generate 버튼을 누른 후에 save private key 버튼을 누르면 안됩니다!!!!! 
+
+그냥 Load 후에 바로 Save private key를 눌러야 하는데 제가 바보같이 generate눌러서 새로운 키 생성해서 저장했더라구요
 # Linux 기본 명령어 
 ### pwd 
 현재 작업중인 디렉토리 정보 출력 
