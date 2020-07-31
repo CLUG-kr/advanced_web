@@ -24,7 +24,11 @@ https://github.com/CLUG-kr/advanced_web/tree/master/2
 
 ## 8.1
 #### Precondition
+- 7.25 수업내용
 #### Contents
+- Gunicorn 사용법 익히기
+- 데몬이란?
+- systemd 사용법 익히기
 
 ## 8.8
 #### Precondition
