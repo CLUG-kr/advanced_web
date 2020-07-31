@@ -23,6 +23,7 @@ https://github.com/CLUG-kr/advanced_web/tree/master/2
 - 리눅스 환경에서 장고 프로젝트 실행
 
 ## 8.1
+https://github.com/CLUG-kr/advanced_web/tree/master/3
 #### Precondition
 - 7.25 수업내용
 #### Contents
