@@ -14,7 +14,7 @@ $ source venv/bin/activate  # 가상환경 실행
 (venv)$ cd  # 홈 디렉토리로 이동
 (venv)$ pip install gunicorn  # 가상환경에 구니콘 설치
 (venv)$ cd test_proj  # 프로젝트 디렉토리 들어가기
-(venv) ~/test_proj$ gunicorn --bind 0.0.0.0:8000 test_proj.wsgi:application django-admin startproject test_proj  # 구니콘 프로세스 시작
+(venv) ~/test_proj$ gunicorn --bind 0.0.0.0:8000 test_proj.wsgi:applicationj  # 구니콘 프로세스 시작
 ```
 실행후에 브라우저에서 접속이 안되면 보안그룹 확인!!
 Not Allowed hosts 에러 발생시에 settings.py 확인 
