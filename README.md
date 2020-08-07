@@ -34,6 +34,8 @@ https://github.com/CLUG-kr/advanced_web/tree/master/3
 ## 8.8
 #### Precondition
 #### Contents
+- 총 복습
+- Nginx 리버스 프록시 세팅하기
 
 ## 8.15
 #### Precondition
