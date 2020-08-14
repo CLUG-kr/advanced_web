@@ -6,8 +6,25 @@
 
 
 ## ca 인증서 다운로드 후
- - scp 명령어
- - unzip install
+```
+ $ scp -i your_key.pem your_domain.zip ubuntu@your_domain:
+ $ ssh -i your_key.pem ubuntu@your_domain
+ $ sudo apt-get update
+ $ sudo apt-get install nginx
+ $ sudo apt-get install unzip
+ $ unzip your_domain.zip
+ $ cat certificate.crt > your_doamin.crt
+ $ cat private.key >> your_domain.crt     <하이픈 다섯개 중간에 띄워쓰기 끼륵끼륵>
+ $ cd /etc/nginx/sites-available
+ $ sudo vi your_doamain
+ $ sudo nginx -t
+ $ sudo systemctl restart nginx
+ ```
+ 
+ # nginx config
+ ```
+ 
+ ```
  
   
 
