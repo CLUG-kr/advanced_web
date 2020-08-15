@@ -1,8 +1,6 @@
 ## 도메인 등록
 - https://xn--220b31d95hq8o.xn--3e0b707e/ 회원가입 진행
 - 인증서 발급 탭 클릭후 자신이 원하는 도메인 검색
-- 
-- cname
 
 
 ## ca 인증서 다운로드 후
@@ -23,7 +21,24 @@
  
  # nginx config
  ```
- 
+ ssl_certificate /home/ubuntu/your_domain.crt;
+ssl_certificate_key /home/ubuntu/private.key;
+server {
+        listen  80;
+        server_name www.co-coding.kro.kr co-coding.kro.kr;
+        return  301 https://$host$request_uri;
+}
+server {
+        listen 443;
+        server_name www.co-coding.kro.kr co-coding.kro.kr;
+        ssl on;
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+        server_name _;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
  ```
  
   
