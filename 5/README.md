@@ -3,22 +3,22 @@
 - 인증서 발급 탭 클릭후 자신이 원하는 도메인 검색
 ### 도메인 등록 후 IP 와 Domain 연결됐는지 확인
 ```
-$ssh -i YOUR_KEY.pem ubuntu@YOUR_DOMAIN
+$ssh -i <YOUR_KEY.pem> ubuntu@<YOUR_DOMAIN>
 ```
 
 # ca 인증서 다운로드 후 crt 파일 생성
 ### scp를 통한 파일 서버 업로드
 ```
-$ scp -i YOUR_KEY.pem YOUR_DOMAIN.zip ubuntu@YOUR_DOMAIN:
+$ scp -i <YOUR_KEY.pem> <YOUR_DOMAIN.zip> ubuntu@<YOUR_DOMAIN>:
 ```
 ### 웹 서버 crt 파일 생성
 ```
- $ ssh -i YOUR_KEY.pem ubuntu@YOUR_DOMAIN
+ $ ssh -i <YOUR_KEY.pem> ubuntu@<YOUR_DOMAIN>
  $ sudo apt-get update
  $ sudo apt-get install unzip
- $ unzip YOUR_DOMAIN.zip
- $ cat certificate.crt > YOUR_DOMAIN.crt
- $ cat private.key >> YOUR_DOMAIN.crt     <하이픈 다섯개 중간에 줄바꿈>
+ $ unzip <YOUR_DOMAIN.zip>
+ $ cat certificate.crt > <YOUR_DOMAIN.crt>
+ $ cat private.key >> <YOUR_DOMAIN.crt>     <하이픈 다섯개 중간에 줄바꿈>
 ```
 
 # Nginx
@@ -30,20 +30,20 @@ $sudo apt-get install nginx
 ### Nginx config 파일 생성
 ```
 $ cd /etc/nginx/sites-available
-# sudo vi your_damain
+# sudo vi <YOUR_DOMAIN>
 ```
 ### Nginx config
 ```
-ssl_certificate /home/ubuntu/your_domain.crt;
+ssl_certificate /home/ubuntu/<YOUR_DOMAIN.crt>;
 ssl_certificate_key /home/ubuntu/private.key;
 server {
         listen  80;
-        server_name www.YOUR_DOMAIN YOUR_DOMAIN;
+        server_name www.<YOUR_DOMAIN> <YOUR_DOMAIN>;
         return  301 https://$host$request_uri;
 }
 server {
         listen 443;
-        server_name www.YOUR_DOMAIN YOUR_DOMAIN;
+        server_name www.<YOUR_DOMAIN> <YOUR_DOMAIN>;
         ssl on;
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
