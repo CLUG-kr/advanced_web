@@ -53,8 +53,6 @@ server {
                 try_files $uri $uri/ =404;
         }
 }
- $ sudo nginx -t
- $ sudo systemctl restart nginx
  ```
  ### 사이트 추가
  ```
