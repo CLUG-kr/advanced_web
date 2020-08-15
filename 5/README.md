@@ -20,8 +20,7 @@ $ scp -i your_key.pem your_domain.zip ubuntu@your_domain:
  $ unzip your_domain.zip
  $ cat certificate.crt > your_doamin.crt
  $ cat private.key >> your_domain.crt     <하이픈 다섯개 중간에 띄워쓰기>
- $ cd /etc/nginx/sites-available
-
+```
 
 # Nginx
 ### Nginx 설치
@@ -29,9 +28,13 @@ $ scp -i your_key.pem your_domain.zip ubuntu@your_domain:
 $sudo apt-get install
 ```
 
-### nginx config 파일 생성
+### Nginx config 파일 생성
 ```
-$ sudo vi your_doamain
+$ cd /etc/nginx/sites-available
+# sudo vi your_damain
+```
+### Nginx config
+```
 ssl_certificate /home/ubuntu/your_domain.crt;
 ssl_certificate_key /home/ubuntu/private.key;
 server {
@@ -53,14 +56,15 @@ server {
  $ sudo nginx -t
  $ sudo systemctl restart nginx
  ```
-  
-
-## Nginx 설치
-- sudo apt-get install nginx
-
-## ca인증서
-
-- 우리 public key >, >>
-- 우리 상위 도메인에대한 퍼블릭키 (ca_bundle)  ->> concat
--nginx config
-
+ ### 사이트 추가
+ ```
+ $ sudo ln -s /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled
+ ```
+ 
+ ### Nginx 문법 검사 및 데몬 재시작
+ ```
+ $sudo nginx -t
+ $ sudo nginx systemctl restart
+ $ sudo nginx systemctl status
+ ```
+ 
