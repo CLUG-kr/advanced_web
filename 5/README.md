@@ -3,7 +3,7 @@
 - 인증서 발급 탭 클릭후 자신이 원하는 도메인 검색
 ### 도메인 등록 후 IP 와 Domain 연결됐는지 확인
 ```
-$ssh -i your_key.pem ubuntu@your_domain
+$ ssh -i your_key.pem ubuntu@your_domain
 ```
 
 # ca 인증서 다운로드 후 crt 파일 생성
