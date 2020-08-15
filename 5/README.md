@@ -63,7 +63,7 @@ server {
  
  ### Nginx 문법 검사 및 데몬 재시작
  ```
- $sudo nginx -t
+ $ sudo nginx -t
  $ sudo nginx systemctl restart
  $ sudo nginx systemctl status
  ```
